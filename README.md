@@ -38,13 +38,20 @@ aws s3api put-public-access-block \
 6. Grant Public Read Access to the Bucket : Set Bucket ACL to Public Read
 aws s3api put-bucket-acl --bucket ishipbuck-10 --acl public-read
 
-7. Set Bucket ACL
-aws s3api put-bucket-acl --bucket thub-demo-bucket09 --acl public-read
-
-
+7. upload files to s3 bucket
 aws s3 cp index.html s3://ishipbuck-10 --acl public-read
+aws s3 cp courses.html s3://ishipbuck-10 --acl public-read
+aws s3 cp about.html s3://ishipbuck-10 --acl public-read
+aws s3 cp contact.html s3://ishipbuck-10 --acl public-read
+aws s3 cp protfolio.html s3://ishipbuck-10 --acl public-read
+aws s3 cp pricing.html s3://ishipbuck-10 --acl public-read
 
+8.To uplload floders to the s3 bucket
 aws s3 cp js s3://ishipbuck-10/js --recursive --acl public-read
+aws s3 cp css s3://ishipbuck-10/css --recursive --acl public-read
+aws s3 cp img s3://ishipbuck-10/img --recursive --acl public-read
+aws s3 cp fonts s3://ishipbuck-10/fonts --recursive --acl public-read
 
-http://thub-demo-bucket09.s3-website-us-west-2.amazonaws.com
+9.End point 
+http://ishipbuck-10.s3-website-us-west-2.amazonaws.com
 
